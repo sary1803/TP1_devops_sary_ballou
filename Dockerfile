@@ -1,7 +1,9 @@
 FROM python:latest
-ADD . /app/
+COPY . /app/
 WORKDIR /app
-RUN pip install requests
+RUN pip install --no-cache-dir requests==2.25.1
 
-CMD ["python,""meteo.py"]
+CMD ["python","meteo.py"]
+
+
 
